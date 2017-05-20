@@ -1,0 +1,5 @@
+name: My database
+type: module
+description: My database awesome module, best of the best!
+core: 8.x
+package: Custom

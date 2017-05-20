@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the my_database module.
+ */
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ *
+ * @see hook_schema()
+ *
+ * @ingroup my_database
+ */
+function my_database_schema() {
+  $schema['custom_table'] = array(
+    'description' => 'My database custom table.',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique ID.',
+      ),
+      'number' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Number",
+      ),
+      'teaser' => array(
+        'type' => 'varchar',
+        'length' => 150,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Teaser.',
+      ),
+      'text' => array(
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big',
+        'description' => 'Text.',
+      ),
+    ),
+    'primary key' => array('id'),
+    'indexes' => array(
+      'number' => array('number'),
+      'teaser' => array('teaser'),
+      'text' => array('text'),
+    ),
+  );
+
+  return $schema;
+}

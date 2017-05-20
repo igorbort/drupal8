@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains my_database.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function my_database_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the my_database module.
+    case 'help.page.my_database':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My database') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,6 @@
+my_page.page:
+  title: Simple - no arguments
+  route_name: mypage_page
+
+# We can't define a menu link for the page_example_arguments route, because it
+# requires path arguments.

@@ -1,0 +1,11 @@
+name: Bort test
+type: module
+description: 'My first page'
+package: Custom
+# core: 8.x
+dependencies:
+  - drupal:node
+
+core: '8.x'
+
+configure: bort_test.settings

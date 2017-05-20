@@ -1,0 +1,31 @@
+my_database.list:
+  path: 'my-database/list'
+  defaults:
+    _title: 'List'
+    _controller: '\Drupal\my_database\Controller\MyDatabaseController::entryList'
+  requirements:
+    _permission: 'access content'
+
+my_database.add:
+  path: 'my-database/add'
+  defaults:
+    _title: 'Add Entry'
+    _form: '\Drupal\my_database\Form\MyDatabaseEntryForm'
+  requirements:
+    _permission: 'access content'
+
+my_database.update:
+  path: 'my-database/{id}/edit'
+  defaults:
+    _title: 'Update Entry'
+    _form: '\Drupal\my_database\Form\MyDatabaseEntryForm'
+  requirements:
+    _permission: 'access content'
+
+my_database.delete:
+  path: 'my-database/{id}/delete'
+  defaults:
+    _title: 'Update Entry'
+    _form: '\Drupal\my_database\Form\MyDatabaseEntryDeleteForm'
+  requirements:
+    _permission: 'access content'

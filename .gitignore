@@ -1,0 +1,12 @@
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+
+# Ignore the system files, except for the config staging sub directory.
+sites/*/files/*
+sites/*/sync/*
+!sites/default/files/config_*
+sites/default/files/config_*/*
+!sites/default/files/config_*/staging
+/themes/bort_theme/.sass-cache
+vendor
+.idea/
